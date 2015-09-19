@@ -38,6 +38,48 @@ body {
     left: 660px;
     width: 550px; }
     #myQuiz .intro p {
-      margin: 0 0 40px 0; }
+      margin: 0 0 40px; }
+  #myQuiz .question {
+    width: 550px;
+    position: absolute;
+    top: 225px;
+    left: 40px; }
+    #myQuiz .question .txt {
+      font-size: 1.6em;
+      margin: 0 0 20px; }
+    #myQuiz .question .ans {
+      display: inline-block;
+      font-size: 1.1em;
+      width: 225px;
+      border: 2px solid rgba(238, 189, 102, 0.4);
+      border-radius: 6px;
+      padding: 10px;
+      margin: 0 15px 15px 0;
+      position: relative;
+      text-align: center; }
+      #myQuiz .question .ans.selected {
+        border-color: #be4b15; }
+        #myQuiz .question .ans.selected::after {
+          background-image: url(../images/icon_incorrect.svg); }
+      #myQuiz .question .ans.correct {
+        border-color: #459a2e; }
+        #myQuiz .question .ans.correct::after {
+          background-image: url(../images/icon_correct.svg); }
+      #myQuiz .question .ans::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: no-repeat 0 0;
+        background-size: 20px 20px;
+        position: absolute;
+        top: 5px;
+        right: 5px; }
+    #myQuiz .question.unanswered .ans {
+      cursor: pointer; }
+      #myQuiz .question.unanswered .ans:hover {
+        background-color: rgba(238, 189, 102, 0.2); }
+    #myQuiz .question.answered .ans {
+      cursor: default; }
 
 /*# sourceMappingURL=quiz.css.map */

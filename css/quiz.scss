@@ -47,7 +47,71 @@ body { background-color: #fff; padding: 20px; }
         width: 550px;
 
         p {
-            margin: 0 0 40px 0;
+            margin: 0 0 40px;
+        }
+    }
+
+    .question {
+        width: 550px;
+        position: absolute;
+        top: 225px;
+        left: 40px;
+
+        .txt {
+            font-size: 1.6em;
+            margin: 0 0 20px;
+        }
+
+        .ans {
+            display: inline-block;
+            font-size: 1.1em;
+            width: 225px;
+            border: 2px solid rgba(238,189,102,.4);
+            border-radius: 6px;
+            padding: 10px;
+            margin: 0 15px 15px 0;
+            position: relative;
+            text-align: center;
+
+            &.selected {
+                border-color: #be4b15;
+
+                &::after {
+                    background-image: url(../images/icon_incorrect.svg);
+                }
+            }
+
+            &.correct {
+                border-color: #459a2e;
+
+                &::after {
+                    background-image: url(../images/icon_correct.svg);
+                }
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                background: no-repeat 0 0;
+                background-size: 20px 20px;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+        }
+
+        &.unanswered .ans {
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(238,189,102,0.2);
+            }
+        }
+
+        &.answered .ans {
+            cursor: default;
         }
     }
 }
