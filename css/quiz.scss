@@ -55,7 +55,7 @@ body { background-color: #fff; padding: 20px; }
         width: 550px;
         position: absolute;
         top: 225px;
-        left: 40px;
+        left: 660px;
 
         .txt {
             font-size: 1.6em;
@@ -110,8 +110,35 @@ body { background-color: #fff; padding: 20px; }
             }
         }
 
-        &.answered .ans {
-            cursor: default;
+        &.answered {
+            .ans {
+                cursor: default;
+            }
+
+           .feedback {
+               visibility: visible;
+               opacity: 1;
+               margin-top: 10px;
+           }
+        }
+    }
+
+    .feedback {
+        color: #efbe5e;
+        margin-top: 10px;
+        -webkit-transition: opacity 1.5s, margin-top 1.5s;
+        -moz-transition: opacity 1.5s, margin-top 1.5s;
+        -o-transition: opacity 1.5s, margin-top 1.5s;
+        transition: opacity 1.5s, margin-top 1.5s;
+        visibility: hidden;
+        opacity: 0;
+
+        .btn {
+            margin-top: 5px;
+        }
+
+        strong {
+            color: #FFF;
         }
     }
 }
